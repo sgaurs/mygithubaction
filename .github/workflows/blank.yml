@@ -7,7 +7,7 @@ on:
       
 jobs:
   build:
-    runs-on: My-Runner
+    runs-on: Sumit-Runner
 
     steps:
       - name: CheckOut-Code 
