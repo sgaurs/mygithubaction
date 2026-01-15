@@ -18,13 +18,17 @@ jobs:
         with:
           node-version: 18 
           cache: 'npm'
+          cache-dependency-path: ReactTodoUIMonolith/package-lock.json
 
       - name: Install dependencies
+        working-directory: ReactTodoUIMonolith
         run: npm ci                
 
       - name: Build
+        working-directory: ReactTodoUIMonolith
         run: npm run build
 
       - name: Test
+        working-directory: ReactTodoUIMonolith
         run: npm test --if-present
 
